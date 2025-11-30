@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshClean Laundry - Professional Laundry Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 150px 2rem 100px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #667eea;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #667eea;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .pricing {
+            background: #f8f9fa;
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .pricing-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .pricing-card.featured {
+            border: 3px solid #667eea;
+            transform: scale(1.05);
+        }
+        
+        .price {
+            font-size: 3rem;
+            color: #667eea;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        .price span {
+            font-size: 1.2rem;
+            color: #666;
+        }
+        
+        .features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+        
+        .features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .contact {
+            text-align: center;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            color: #667eea;
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🧺 FreshClean</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Professional Laundry Services</h1>
+        <p>Fresh, Clean, and Delivered to Your Door</p>
+        <a href="#contact" class="cta-button">Get Started Today</a>
+    </section>
+
+    <section id="services" class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services">
+            <div class="service-card">
+                <div class="service-icon">👕</div>
+                <h3>Wash & Fold</h3>
+                <p>Professional washing, drying, and folding service. Your clothes returned fresh and neatly organized.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">👔</div>
+                <h3>Dry Cleaning</h3>
+                <p>Expert dry cleaning for delicate fabrics, suits, dresses, and special garments.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">👗</div>
+                <h3>Ironing & Pressing</h3>
+                <p>Crisp, wrinkle-free clothes with our professional ironing and pressing service.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚚</div>
+                <h3>Pickup & Delivery</h3>
+                <p>Free pickup and delivery service. Schedule online and we'll handle the rest.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏠</div>
+                <h3>Home Textiles</h3>
+                <p>Cleaning for bedding, curtains, towels, and other household textiles.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3>Express Service</h3>
+                <p>Need it fast? Our express service delivers within 24 hours.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Pricing Plans</h2>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Basic</h3>
+                    <div class="price">$15<span>/load</span></div>
+                    <ul class="features">
+                        <li>Wash & Fold</li>
+                        <li>Standard Detergent</li>
+                        <li>48-hour Turnaround</li>
+                        <li>Pickup & Delivery</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Choose Plan</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Premium</h3>
+                    <div class="price">$25<span>/load</span></div>
+                    <ul class="features">
+                        <li>Wash & Fold</li>
+                        <li>Premium Detergent</li>
+                        <li>24-hour Turnaround</li>
+                        <li>Pickup & Delivery</li>
+                        <li>Fabric Softener</li>
+                        <li>Stain Treatment</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Choose Plan</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Business</h3>
+                    <div class="price">$199<span>/month</span></div>
+                    <ul class="features">
+                        <li>Unlimited Loads</li>
+                        <li>Priority Service</li>
+                        <li>Same-day Delivery</li>
+                        <li>Dedicated Account Manager</li>
+                        <li>Custom Preferences</li>
+                        <li>Volume Discounts</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Choose Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container contact">
+        <h2 class="section-title">Contact Us</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem;">Ready to experience the best laundry service? Get in touch with us today!</p>
+        <div class="contact-info">
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <strong>Phone</strong>
+                <span>(555) 123-4567</span>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <strong>Email</strong>
+                <span>info@freshclean.com</span>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <strong>Address</strong>
+                <span>123 Clean Street, City, ST 12345</span>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">🕐</div>
+                <strong>Hours</strong>
+                <span>Mon-Sat: 7AM - 9PM</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 FreshClean Laundry. All rights reserved.</p>
+        <p>Professional laundry services you can trust.</p>
+    </footer>
+</body>
+</html>
